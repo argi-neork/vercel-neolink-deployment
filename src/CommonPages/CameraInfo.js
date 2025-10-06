@@ -2315,7 +2315,7 @@ const CameraEnrollment = () => {
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px', fontFamily: 'Inter, system-ui, -apple-system, sans-serif' }}>
       <CustomMessageBox message={systemMessage} onClose={handleCloseMessage} />
       
-      <h2 style={{ color: '#1f2937', marginBottom: '24px' }}>📷 Premium Camera Enrollment</h2>
+      <h2 style={{ color: '#1f2937', marginBottom: '24px' }}> Camera Enrollment</h2>
       
       <div style={{ 
         backgroundColor: '#1e40af', 
