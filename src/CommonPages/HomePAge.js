@@ -7,7 +7,7 @@ import {
     Menu,
     Camera,
     Settings,
-    AlertTriangle   
+    AlertTriangle
 } from 'lucide-react';
 import EmployeeList from './EmployeeList';
 import EnrollmentPage from './EnrollmentPage';
@@ -15,6 +15,7 @@ import ReportPage from './ReportPage';
 import CameraPage from './CameraPage';
 import SettingPage from './SettingPage';
 import IntrudeReport from './IntrudeReport';
+import CameraInfo from './CameraInfo';
 import avathar from '../images/avatar.png';
 
 // Main App Component
@@ -28,8 +29,8 @@ const HomePage = () => {
         { id: 'enrollment', label: 'Enroll Employees', icon: UserCheck },
         { id: 'camera', label: 'Camera Integration', icon: Camera },
         { id: 'report', label: 'Report Section', icon: FileText },
-        { id: 'settings', label: 'Settings', icon: Settings }
-
+        { id: 'settings', label: 'Settings', icon: Settings },
+        { id: 'enrollment-camera', label: 'Camera Info', icon: UserCheck },
     ];
 
     const renderContent = () => {
@@ -46,6 +47,8 @@ const HomePage = () => {
                 return <ReportPage />;
             case 'settings':
                 return <SettingPage />;
+            case 'enrollment-camera':
+                return <CameraInfo />;
             default:
                 return <IntrudeReport />;
         }
@@ -133,7 +136,7 @@ const HomePage = () => {
                         <LogOut size={18} className={sidebarCollapsed ? 'mx-auto' : 'me-2'} />
                         {!sidebarCollapsed && 'Logout'}
                     </button>
-                </div> 
+                </div>
             </div>
 
             {/* Main Content */}
